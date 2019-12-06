@@ -25,22 +25,23 @@ int main(int argc, char **argv) {
             makeFs(args, arg1, arg2);
         }
         else if((strcmp(cmd, "mount")) == 0){
+            mountFs(args, arg1, arg2);
 
         }
         else if((strcmp(cmd, "unmount")) == 0){
-
+            unmountFs(args, arg1, arg2);
         }
         else if((strcmp(cmd, "open")) == 0){
-
+            openFs(args, arg1, arg2);
         }
         else if((strcmp(cmd, "close")) == 0){
 
         }
         else if((strcmp(cmd, "create")) == 0){
-
+            createFs(args, arg1, arg2);
         }
         else if((strcmp(cmd, "delete")) == 0){
-
+            deleteFs(args, arg1, arg2);
         }
         else if((strcmp(cmd, "mkdir")) == 0){
 

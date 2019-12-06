@@ -16,12 +16,42 @@ void makeFs(int args, char *arg1, char *arg2){
     int size = atoi(arg2);
     make_fs(arg1, size);
 }
-/*void mountFs(int args, char *arg1, char *arg2);
-void unmountFs(int args, char *arg1, char *arg2);
-void openFs(int args, char *arg1, char *arg2);
+void mountFs(int args, char *arg1, char *arg2){
+    if(args != 2){
+        printf("mountFs error: Invalid arguments\n");
+        return;
+    }
+    mount_fs(arg1);
+}
+void unmountFs(int args, char *arg1, char *arg2){
+    if(args != 2){
+        printf("unmountFs error: Invalid arguments\n");
+        return;
+    }
+    unmount_fs(arg1);
+}
+void openFs(int args, char *arg1, char *arg2){
+    if(args != 2){
+        printf("openFs error: Invalid arguments\n");
+        return;
+    }
+    fs_open(arg1);
+}
 //void closeFs(int args, char *arg1, char *arg2);
-void createFs(int args, char *arg1, char *arg2);
-void deleteFs(int args, char *arg1, char *arg2);*/
+void createFs(int args, char *arg1, char *arg2){
+    if(args != 2){
+        printf("createFs error: Invalid arguments\n");
+        return;
+    }
+    fs_create(arg1);
+}
+void deleteFs(int args, char *arg1, char *arg2){
+    if(args != 2){
+        printf("deleteFs error: Invalid arguments\n");
+        return;
+    }
+    fs_delete(arg1);
+}
 
 
 /*void mkdirFs(int args, char *arg1, char *arg2);
